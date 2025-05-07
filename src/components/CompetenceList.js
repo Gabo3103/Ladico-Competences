@@ -4,27 +4,43 @@ import CompetenceCard from './CompetenceCard';
 
 const data = [
   {
-    icon: '💻',
+    category: 'CONTENT CREATION',
     title: 'Creación de contenidos digitales',
-    description: 'Desarrollar contenidos utilizando herramientas digitales.'
+    level: 0,
   },
   {
-    icon: '🔐',
+    category: 'SECURITY',
     title: 'Seguridad',
-    description: 'Aplicar medidas de seguridad en el entorno digital.'
+    level: 0,
   },
   {
-    icon: '🧠',
+    category: 'PROBLEM SOLVING',
     title: 'Resolución de problemas',
-    description: 'Solucionar problemas técnicos y seleccionar herramientas digitales adecuadas.'
-  }
+    level: 0,
+  },
+  {
+    category: 'INFORMATION AND DATA',
+    title: 'Data management',
+    level: 0,
+  },
+  {
+    category: 'COMMUNICATION AND COLLABORATION',
+    title: 'Interacting',
+    level: 0,
+  },
 ];
+
 
 function CompetenceList() {
   return (
     <div className="competence-list">
       {data.map((item, index) => (
-        <CompetenceCard key={index} {...item} />
+        <CompetenceCard
+          key={index}
+          category={item.category}
+          title={item.title}
+          level={item.level}
+        />
       ))}
     </div>
   );
