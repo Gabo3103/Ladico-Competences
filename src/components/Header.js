@@ -1,21 +1,30 @@
+import React, { useState } from 'react';
+import '../style/Header.css';
 
-import React from 'react';
+function Header({ username = "User" }) {
+  const [open, setOpen] = useState(false);
 
-function Header() {
   return (
     <header className="header">
-      <div className="user-menu">
-        <span className="username">User</span>
-        <div className="dropdown">
-          <button>☰</button>
-          <ul className="dropdown-content">
-            <li>Preferencias</li>
-            <li>Cerrar sesión</li>
-          </ul>
+      <div className="header-right">
+        <div className="user-menu" onClick={() => setOpen(!open)}>
+          {username.split(' ')[0]} ▼
         </div>
+        {open && (
+          <div className="dropdown">
+            <div className="dropdown-header">{username}</div>
+            <ul>
+            <li>Mi cuenta</li>
+            <li>Mis certificaciones</li>
+            <li>Ayuda</li>
+            <li className="logout">🔌 Cerrar sesión</li>
+            </ul>
+          </div>
+        )}
       </div>
     </header>
   );
 }
 
 export default Header;
+

@@ -1,5 +1,5 @@
-
 import React from 'react';
+import '../style/Sidebar.css';
 
 function Sidebar({ onNavigate, currentPage }) {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/CompetenceCard.css';
+import '../style/CompetenceCard.css';
 
 function CompetenceCard({ title = "Developing text documents", category = "CREACIÓN DE CONTENIDOS DIGITALES", level = 0 }) {
   const progressDegrees = level * 360;

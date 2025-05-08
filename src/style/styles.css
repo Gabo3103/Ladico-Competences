@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f6fa;
+  font-family: "Poppins", sans-serif;
 }
 
 .app {
@@ -43,10 +43,10 @@ body {
 }
 
 .main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  margin-left: 260px;
+  padding: 2rem;
 }
+
 
 .header {
   background-color: white;
