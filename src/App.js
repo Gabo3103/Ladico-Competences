@@ -23,7 +23,7 @@ function App() {
   }
   return (
     <div className="app">
-      <Sidebar onNavigate={setCurrentPage} />
+      <Sidebar onNavigate={setCurrentPage} currentPage={currentPage} />
       <div className="main-content">
         <Header />
         {content}
