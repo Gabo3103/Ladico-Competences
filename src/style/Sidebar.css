@@ -4,7 +4,7 @@
     left: 20px;
     height: 85vh;
     width: 220px;
-    background-color: #4328a2;
+    background: linear-gradient(135deg, #004B9B, #0072CE);
     color: white;
     padding: 2rem 1rem;
     display: flex;
@@ -62,4 +62,21 @@
     font-weight: bold;
     text-decoration: underline;
   }
+
+  .logo {
+    max-width: 160px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 2rem;
+    display: block;
+    filter: brightness(0) invert(1); 
+    transition: filter 0.3s ease;
+  }
+
+  body.light .logo {
+    filter: none; 
+  }
   
+  body.dark .logo {
+    filter: brightness(0) invert(1); 
+  }

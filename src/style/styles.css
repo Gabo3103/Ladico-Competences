@@ -10,12 +10,7 @@ body {
   height: 100vh;
 }
 
-.sidebar {
-  width: 220px;
-  background-color: #A8D4F1;
-  color: white;
-  padding: 1rem;
-}
+
 
 .sidebar h2 {
   margin-bottom: 1rem;

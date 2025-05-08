@@ -5,7 +5,7 @@ function Sidebar({ onNavigate, currentPage }) {
 
   return (
     <aside className="sidebar">
-  <h2>LADICO</h2>
+  <img src="/img/ladico.png" alt="LADICO logo" className="logo" />
   <nav>
     <ul>
       <li
