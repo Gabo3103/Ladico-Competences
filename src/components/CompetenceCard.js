@@ -1,22 +1,33 @@
 import React from 'react';
 import '../styles/CompetenceCard.css';
 
-function CompetenceCard({ title = "Developing text documents", category = "CONTENT CREATION", level = 0.25 }) {
+function CompetenceCard({ title = "Developing text documents", category = "CREACIÓN DE CONTENIDOS DIGITALES", level = 0 }) {
   const progressDegrees = level * 360;
 
   const categoryColors = {
-    "INFORMATION AND DATA": "linear-gradient(180deg, #f26a2e 0%, #f7873d 100%)",
-    "COMMUNICATION AND COLLABORATION": "linear-gradient(180deg, #1cb57a 0%, #27b889 100%)",
-    "CONTENT CREATION": "linear-gradient(180deg, #1da1f2 0%, #2996f5 100%)",
-    "SECURITY": "linear-gradient(180deg, #8e44ad 0%, #9b59b6 100%)",
-    "PROBLEM SOLVING": "linear-gradient(180deg, #34495e 0%, #2c3e50 100%)",
+    "INFORMATION AND DATA": "linear-gradient(180deg, #00a8e8 0%, #007ea7 100%)",
+    "COMMUNICATION AND COLLABORATION": "linear-gradient(180deg, #a066b0 0%, #844d9e 100%)",
+    "CONTENT CREATION": "linear-gradient(180deg, #ff7e29 0%, #e65100 100%)",
+    "SECURITY": "linear-gradient(180deg, #88b04b 0%, #618833 100%)",
+    "PROBLEM SOLVING": "linear-gradient(180deg, #f25c54 0%, #d64541 100%)",
   };
+
+  const categoryMap = {
+    "BÚSQUEDA Y GESTIÓN DE INFORMACIÓN Y DATOS": "INFORMATION AND DATA",
+    "COMUNICACIÓN Y COLABORACIÓN": "COMMUNICATION AND COLLABORATION",
+    "CREACIÓN DE CONTENIDOS DIGITALES": "CONTENT CREATION",
+    "SEGURIDAD": "SECURITY",
+    "RESOLUCIÓN DE PROBLEMAS": "PROBLEM SOLVING"
+  };
+
+  const resolvedCategory = categoryMap[category.toUpperCase()] || category.toUpperCase();
+  const backgroundStyle = categoryColors[resolvedCategory] || '#ccc';
 
   return (
     <div className="card-container">
       <div
         className="card-header"
-        style={{ background: categoryColors[category.toUpperCase()] || '#ccc' }}
+        style={{ background: backgroundStyle }}
       >
         <p className="category">{category}</p>
         <h3 className="title">{title}</h3>
@@ -56,5 +67,6 @@ function CompetenceCard({ title = "Developing text documents", category = "CONTE
     </div>
   );
 }
+
 
 export default CompetenceCard;

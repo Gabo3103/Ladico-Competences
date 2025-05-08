@@ -83,12 +83,21 @@ body {
   cursor: pointer;
 }
 
-.competence-list {
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+.competence-area {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee; 
 }
+
+
+.competence-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0 1rem;
+  justify-content: flex-start;
+}
+
 
 .competence-card {
   background-color: white;
@@ -103,3 +112,11 @@ body {
   font-size: 2rem;
   margin-right: 1rem;
 }
+
+.area-title {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+  margin: 1.2rem 1rem 0.5rem;
+}
+
